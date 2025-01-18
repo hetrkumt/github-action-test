@@ -1,0 +1,18 @@
+name: file tree
+
+on:
+  workflow_dispatch
+
+jobs:
+
+  file-tree:
+
+    runs-on: self-hosted
+
+    steps:
+    - name: Install tree
+      run: |
+        choco install tree -y
+    - name: Execute tree
+      run: |
+        tree > filetreelist.txt
