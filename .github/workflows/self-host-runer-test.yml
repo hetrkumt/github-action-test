@@ -16,6 +16,9 @@ jobs:
     - name: Reboot system
       run: |
         shutdown /r /t 0
+    - name: Wait for system to reboot
+      run: |
+        timeout 60
     - name: Execute tree
       run: |
         tree > filetreelist.txt
