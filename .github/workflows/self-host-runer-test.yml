@@ -13,6 +13,9 @@ jobs:
     - name: Install tree
       run: |
         choco install tree -y
+    - name: Reboot system
+      run: |
+        shutdown /r /t 0
     - name: Execute tree
       run: |
         tree > filetreelist.txt
