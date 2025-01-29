@@ -1,11 +1,6 @@
 name: Verify file
 on: [push]
 
-vars:
-  JOB_NAME: Verify Job
-  EXEC_WF: true
-  FILE_TO_CHECK: Readme.md
-
 jobs:
   verify:
     name: ${{ vars.JOB_NAME }}
