@@ -1,5 +1,11 @@
-name: Verify file
+name: Verify File
+
 on: [push]
+
+vars:
+  JOB_NAME: Verify Job
+  EXEC_WF: true
+  FILE_TO_CHECK: CONTRIBUTING.md
 
 jobs:
   verify:
@@ -9,5 +15,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
-          [[ -f ${{ vars.FILE_TO_CHECK }} ]] || \\
+          [[ -f ${{ vars.FILE_TO_CHECK }} ]] || \
           ( echo "${{ vars.FILE_TO_CHECK }} file needs to be added to ${{ github.repository }} !" && exit 1 )
