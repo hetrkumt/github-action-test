@@ -2,10 +2,6 @@ name: Verify File
 
 on: [push]
 
-vars:
-  JOB_NAME: Verify Job
-  EXEC_WF: true
-  FILE_TO_CHECK: CONTRIBUTING.md
 
 jobs:
   verify:
