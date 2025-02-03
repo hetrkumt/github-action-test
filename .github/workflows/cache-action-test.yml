@@ -3,12 +3,11 @@ name: Cache Action Test
 on:
   push:
     branches:
-      - main
       - new-feature-branch
   pull_request:
     branches:
-      - main
       - new-feature-branch
+
 
 
 jobs:
