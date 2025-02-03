@@ -27,8 +27,11 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: 17
-          distribution: adopt
+          java-version: 11
+          distribution: adopt  # distribution 값을 설정합니다.
+
+      - name: Grant execute permission for Gradlew
+        run: chmod +x ./gradlew  # gradlew 파일에 실행 권한을 부여합니다.
 
       - name: Build with Gradle
         run: ./gradlew build
